@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TegraX", "TegraX\TegraX.csproj", "{EEA6D546-90AA-4793-ADD1-E2B0A15B6316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TegraXTest", "TegraXTest\TegraXTest.csproj", "{5E943287-FD45-4728-8E8C-28D778F1AB22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TgVozderzhansBot", "TgVozderzhansBot\TgVozderzhansBot.csproj", "{BDB2D099-1F0B-4197-9517-0BBECCA976F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeleticaOnlineX", "HeleticaOnlineX\HeleticaOnlineX.csproj", "{0A5EE143-7D16-4FA1-8C69-ACB050CB8507}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEA6D546-90AA-4793-ADD1-E2B0A15B6316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA6D546-90AA-4793-ADD1-E2B0A15B6316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA6D546-90AA-4793-ADD1-E2B0A15B6316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA6D546-90AA-4793-ADD1-E2B0A15B6316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E943287-FD45-4728-8E8C-28D778F1AB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E943287-FD45-4728-8E8C-28D778F1AB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E943287-FD45-4728-8E8C-28D778F1AB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E943287-FD45-4728-8E8C-28D778F1AB22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB2D099-1F0B-4197-9517-0BBECCA976F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB2D099-1F0B-4197-9517-0BBECCA976F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB2D099-1F0B-4197-9517-0BBECCA976F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB2D099-1F0B-4197-9517-0BBECCA976F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5EE143-7D16-4FA1-8C69-ACB050CB8507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5EE143-7D16-4FA1-8C69-ACB050CB8507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5EE143-7D16-4FA1-8C69-ACB050CB8507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5EE143-7D16-4FA1-8C69-ACB050CB8507}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
