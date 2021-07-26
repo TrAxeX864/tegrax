@@ -8,6 +8,13 @@ WORKDIR /usr/src/app
 
 COPY . .
 
+WORKDIR /usr/src/app/TgVozderzhansBot
+RUN dotnet new tool-manifest
+RUN dotnet tool install dotnet-ef --version 5.0.1
+RUN export PATH="$PATH:$HOME/.dotnet/tools/"
+
+RUN dotnet ef database update
+
 RUN mkdir /app
 
 RUN dotnet publish -c release -o /app
