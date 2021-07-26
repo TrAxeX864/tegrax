@@ -1,12 +1,18 @@
-version: "2"
+version: "3.8"
 
 volumes:
   db: {}
 
 services:
 
+  tg_bot:
+    build: .
+    depends_on:
+      - db
+
   db:
     image: postgres
+    container_name: db
     environment:
       - POSTGRES_PASSWORD=13781001
       - POSTGRES_USER=postgres
@@ -15,10 +21,4 @@ services:
     volumes:
       - db:/var/lib/postgresql/data
     ports:
-      - 5432:5435
-
-  tg_bot:
-    build: .
-    restart: always
-    depends_on:
-      - db
+      - 5439:5432

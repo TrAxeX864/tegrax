@@ -26,7 +26,7 @@ namespace TgVozderzhansBot.Database
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5435;Database=tg_vozd;Username=postgres;Password=13781001");
+            optionsBuilder.UseNpgsql("Host=172.17.0.1;Port=5439;Database=tg_vozd;Username=postgres;Password=13781001");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
