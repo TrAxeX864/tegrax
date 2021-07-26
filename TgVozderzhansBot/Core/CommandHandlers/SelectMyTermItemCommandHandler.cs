@@ -59,9 +59,7 @@ namespace TgVozderzhansBot.Core.CommandHandlers
                 var buttonList = new List<InlineKeyboardButton>();
                 
                 buttonList.Add(button1);
-                
-                if(user.HasPremium)
-                    buttonList.Add(button2);
+                buttonList.Add(button2);
                 
                 await TelegramBotClient.SendTextMessageAsync(update.CallbackQuery.Message.Chat.Id,
                     $"Текущий срок воздержания \"{absItemType}\":\n\n" + str, ParseMode.Html, 

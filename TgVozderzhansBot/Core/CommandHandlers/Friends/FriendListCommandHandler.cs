@@ -117,13 +117,13 @@ namespace TgVozderzhansBot.Core.CommandHandlers.Friends
                     });
                 }
                 
-                if (!user.HasPremium)
-                {
-                    buttons = buttons.Take(2).ToList();
-                    navButtons = new List<InlineKeyboardButton>();
-
-                    text = "<b>Внимание!</b> У вас нет премиум аккаунта. Будет отображаться только два друга.\n\n" + text;
-                }
+                // if (!user.HasPremium)
+                // {
+                //     buttons = buttons.Take(2).ToList();
+                //     navButtons = new List<InlineKeyboardButton>();
+                //
+                //     text = "<b>Внимание!</b> У вас нет премиум аккаунта. Будет отображаться только два друга.\n\n" + text;
+                // }
                 
                 buttons.Add(navButtons);
 

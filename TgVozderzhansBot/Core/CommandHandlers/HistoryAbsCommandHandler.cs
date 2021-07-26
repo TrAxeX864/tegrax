@@ -53,12 +53,12 @@ namespace TgVozderzhansBot.Core.CommandHandlers
                 }
             }
             
-            if (!user.HasPremium)
-            {
-                await TelegramBotClient.AnswerCallbackQueryAsync(update.CallbackQuery.Id,
-                    "Чтобы воспользоваться данной функцией у вас должен быть премиум аккаунт.", true);
-                return;
-            }
+            // if (!user.HasPremium)
+            // {
+            //     await TelegramBotClient.AnswerCallbackQueryAsync(update.CallbackQuery.Id,
+            //         "Чтобы воспользоваться данной функцией у вас должен быть премиум аккаунт.", true);
+            //     return;
+            // }
             
             var absItemTypes = absItemDbRepository.GetAllAbsItemTypes(offset, ItemsOnPage);
             

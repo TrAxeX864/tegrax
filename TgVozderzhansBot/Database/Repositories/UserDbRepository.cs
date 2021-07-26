@@ -143,9 +143,9 @@ namespace TgVozderzhansBot.Database.Repositories
         {
             var timeSpan = DateTime.Now - user.CreatedAt;
 
-            if (!user.HasPremium && timeSpan.TotalDays <= 5)
+            if (!user.HasPremium && timeSpan.TotalDays <= 2)
             {
-                user.PremiumActiveTo = DateTime.Now.AddDays(7);
+                user.PremiumActiveTo = DateTime.Now.AddDays(2);
 
                 _db.Users.Update(user);
                 _db.SaveChanges();

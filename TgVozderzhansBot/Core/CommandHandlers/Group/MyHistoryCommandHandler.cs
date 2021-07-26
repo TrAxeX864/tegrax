@@ -41,13 +41,13 @@ namespace TgVozderzhansBot.Core.CommandHandlers.Group
             
             var user = userDbRepository.GetUser(update.Message.From.Id);
 
-            if (!user.HasPremium)
-            {
-                await TelegramBotClient.SendTextMessageAsync(update.Message.Chat.Id,
-                    "Чтобы посмотреть историю воздержания вам нужен премиум аккаунт.",
-                    replyToMessageId: update.Message.MessageId);
-                return;
-            }
+            // if (!user.HasPremium)
+            // {
+            //     await TelegramBotClient.SendTextMessageAsync(update.Message.Chat.Id,
+            //         "Чтобы посмотреть историю воздержания вам нужен премиум аккаунт.",
+            //         replyToMessageId: update.Message.MessageId);
+            //     return;
+            // }
             
             var currentAbstinenceList = absItemDbRepository.GetCurrentAbstinenceList(user);
 

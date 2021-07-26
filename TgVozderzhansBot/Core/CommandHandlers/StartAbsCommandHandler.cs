@@ -37,14 +37,14 @@ namespace TgVozderzhansBot.Core.CommandHandlers
 
             var user = userDbRepository.GetUser(update.CallbackQuery.Message.Chat.Id);
 
-            var currentAbstinenceList = absItemDbRepository.GetCurrentAbstinenceList(user);
+            //var currentAbstinenceList = absItemDbRepository.GetCurrentAbstinenceList(user);
 
-            if (!user.HasPremium && currentAbstinenceList.Count > 0)
-            {
-                await TelegramBotClient.AnswerCallbackQueryAsync(update.CallbackQuery.Id,
-                    "Чтобы воздерживаться более чем по одной категории, вам нужен премиум аккаунт", true);
-                return;
-            }
+            // if (!user.HasPremium && currentAbstinenceList.Count > 0)
+            // {
+            //     await TelegramBotClient.AnswerCallbackQueryAsync(update.CallbackQuery.Id,
+            //         "Чтобы воздерживаться более чем по одной категории, вам нужен премиум аккаунт", true);
+            //     return;
+            // }
             
             bool flag = absItemDbRepository.StartNewAbstinence(user, absItemType);
             

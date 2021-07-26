@@ -37,7 +37,6 @@ namespace TgVozderzhansBot.Core.Workers
                         AbsGuardItemDbRepository absGuardItemDbRepository = new AbsGuardItemDbRepository();
                         
                         var users = db.Users.Include(x => x.AbsItems).Where(x => 
-                            !(x.PremiumActiveTo != null && DateTime.Now <= x.PremiumActiveTo) &&
                             x.AbsItems.Count(c => c.Finished == null) > 0 &&
                             x.PublicAccount).ToList();
 

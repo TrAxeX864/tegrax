@@ -4,9 +4,6 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 
 RUN apt-get update
 
-RUN apt-get install -y inetutils-ping
-RUN apt-get install -y net-tools
-
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 

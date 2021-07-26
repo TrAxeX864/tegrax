@@ -31,13 +31,13 @@ namespace TgVozderzhansBot.Core.CommandHandlers.Friends
 
             var user = userDbRepository.GetUser(update.CallbackQuery.Message.Chat.Id);
 
-            if (!user.HasPremium && friendDbRepository.GetFriendsCount(user) >= 2)
-            {
-                TelegramBotClient.AnswerCallbackQueryAsync(update.CallbackQuery.Id,
-                    "Чтобы пригласить больше друзей вам нужен премиум аккаунт.", true);
-
-                return;
-            }
+            // if (!user.HasPremium && friendDbRepository.GetFriendsCount(user) >= 2)
+            // {
+            //     TelegramBotClient.AnswerCallbackQueryAsync(update.CallbackQuery.Id,
+            //         "Чтобы пригласить больше друзей вам нужен премиум аккаунт.", true);
+            //
+            //     return;
+            // }
             
             string text = "Введите никнейм друга с собакой:";
 
