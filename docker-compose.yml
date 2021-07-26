@@ -11,6 +11,7 @@ services:
       - POSTGRES_PASSWORD=13781001
       - POSTGRES_USER=postgres
       - POSTGRES_DB=tg_vozd
+    restart: always
     volumes:
       - db:/var/lib/postgresql/data
     ports:
@@ -19,4 +20,5 @@ services:
   tg_bot:
     build: .
     restart: always
-
+    depends_on:
+      - db

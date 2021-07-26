@@ -10,7 +10,7 @@ COPY . .
 
 WORKDIR /usr/src/app/TgVozderzhansBot
 RUN dotnet new tool-manifest
-RUN dotnet tool install dotnet-ef --version 5.0.1
+RUN dotnet tool install dotnet-ef --version 5.0.7
 RUN export PATH="$PATH:$HOME/.dotnet/tools/"
 
 RUN dotnet ef database update
