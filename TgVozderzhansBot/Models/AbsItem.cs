@@ -25,7 +25,9 @@ namespace TgVozderzhansBot.Models
         [Description("Музыка")]
         Музыка = 8,
         [Description("Фильмы")]
-        Фильмы = 9
+        Фильмы = 9,
+        [Description("Сладкое")]
+        Сладкое = 10
     }
     
     public static class Extensions
