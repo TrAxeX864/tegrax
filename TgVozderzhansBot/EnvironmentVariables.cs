@@ -2,6 +2,6 @@ namespace TgVozderzhansBot
 {
     public static class EnvironmentVariables
     {
-        public static readonly bool IsDebugMode = false;
+        public static readonly bool IsDebugMode = true;
     }
 }
