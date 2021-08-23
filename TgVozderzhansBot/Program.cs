@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Threading;
 using TegraX.Core;
 using Telegram.Bot;
@@ -13,11 +14,9 @@ namespace TgVozderzhansBot
     {
         static void Main(string[] args)
         {
-            ConfigRepository configRepository = new ConfigRepository();
+            DotNetEnv.Env.Load();
 
-            string botToken = configRepository.ReadTgBotToken();
-
-            TelegramBotClient botClient = new TelegramBotClient(botToken);
+            TelegramBotClient botClient = new TelegramBotClient(DotNetEnv.Env.GetString("TG_BOT_TOKEN"));
             
             TegraBot tegraBot = new TegraBot(botClient);
 

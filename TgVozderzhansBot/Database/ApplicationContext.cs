@@ -26,14 +26,17 @@ namespace TgVozderzhansBot.Database
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!EnvironmentVariables.IsDebugMode)
-            {
-                optionsBuilder.UseNpgsql("Host=172.17.0.1;Port=5439;Database=tg_vozd;Username=postgres;Password=13781001");
-            }
-            else
-            {
-                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=tg_vozd;Username=postgres;Password=13781001");
-            }
+            // if (!EnvironmentVariables.IsDebugMode)
+            // {
+            //     optionsBuilder.UseNpgsql("Host=172.17.0.1;Port=5439;Database=tg_vozd;Username=postgres;Password=13781001");
+            // }
+            // else
+            // {
+            //     optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=tg_vozd;Username=postgres;Password=13781001");
+            // }
+
+            DotNetEnv.Env.Load();
+            optionsBuilder.UseNpgsql(DotNetEnv.Env.GetString("DB_STRING"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
