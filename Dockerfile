@@ -21,7 +21,7 @@ RUN mkdir /app
 RUN dotnet publish -c release -o /app
 
 RUN cp -R /usr/src/app/ProductionFiles/* /app
-RUN cp -R /usr/src/app/.env /app/.env
+RUN cp -R /usr/src/app/TgVozderzhansBot/.env /app/.env
 
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
