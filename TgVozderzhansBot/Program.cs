@@ -68,8 +68,8 @@ namespace TgVozderzhansBot
             var pollWorker = new PollWorker(botClient);
             pollWorker.Start();
 
-            //var quoteWorker = new QuoteWorker(botClient);
-            //quoteWorker.Start();
+            var quoteWorker = new QuoteWorker(botClient);
+            quoteWorker.Start();
             
             while (true)
             {
