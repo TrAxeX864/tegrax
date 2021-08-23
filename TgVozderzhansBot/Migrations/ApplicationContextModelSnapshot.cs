@@ -257,6 +257,54 @@ namespace TgVozderzhansBot.Migrations
                     b.ToTable("PollItems");
                 });
 
+            modelBuilder.Entity("TgVozderzhansBot.Models.Quote", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasMaxLength(3000)
+                        .HasColumnType("character varying(3000)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Quotes");
+                });
+
+            modelBuilder.Entity("TgVozderzhansBot.Models.QuoteTable", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<long?>("LastQuoteId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<long?>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LastQuoteId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("QuoteTables");
+                });
+
             modelBuilder.Entity("TgVozderzhansBot.Models.User", b =>
                 {
                     b.Property<long>("Id")
@@ -395,6 +443,21 @@ namespace TgVozderzhansBot.Migrations
                         .HasForeignKey("OwnerId");
 
                     b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("TgVozderzhansBot.Models.QuoteTable", b =>
+                {
+                    b.HasOne("TgVozderzhansBot.Models.Quote", "LastQuote")
+                        .WithMany()
+                        .HasForeignKey("LastQuoteId");
+
+                    b.HasOne("TgVozderzhansBot.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("LastQuote");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("TgVozderzhansBot.Models.User", b =>

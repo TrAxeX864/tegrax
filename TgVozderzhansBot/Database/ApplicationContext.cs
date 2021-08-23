@@ -24,6 +24,10 @@ namespace TgVozderzhansBot.Database
         
         public DbSet<PollItem> PollItems { get; set; }
         
+        public DbSet<QuoteTable> QuoteTables { get; set; }
+        
+        public DbSet<Quote> Quotes { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // if (!EnvironmentVariables.IsDebugMode)
